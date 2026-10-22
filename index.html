@@ -90,10 +90,10 @@ h2 { font-family:"Unbounded",Arial,sans-serif; font-weight:500; font-size:clamp(
 .step b { display:block; font-size:15px; margin-bottom:6px; font-weight:600; }
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
 .about-big { font-family:"Unbounded",Arial,sans-serif; font-size:clamp(23px,3vw,36px); line-height:1.28; letter-spacing:-.04em; }
-.about-big .story-accent { display:block; margin-top:8px; color:var(--red); font-style:italic; }
-.about-quote { width:100%; margin:34px 0 0; font-family:var(--serif); font-size:clamp(22px,3.1vw,34px); line-height:1.28; font-weight:700; font-style:italic; letter-spacing:-.025em; }
-.about-big .story-accent { display:block; margin-top:8px; color:var(--red); font-style:italic; }
-.about-quote { width:100%; margin:34px 0 0; font-family:var(--serif); font-size:clamp(22px,3.1vw,34px); line-height:1.28; font-weight:700; font-style:italic; letter-spacing:-.025em; }
+.about-big .story-accent { display:block; margin-top:0; color:var(--red); font-style:normal; }
+.about-quote { margin:16px 0 0; max-width:100%; border-left:2px solid var(--red); padding:1px 0 1px 14px; font-family:var(--serif); font-size:clamp(16px,1.55vw,19px); line-height:1.35; font-weight:700; font-style:italic; letter-spacing:0; overflow-wrap:normal; word-break:normal; }
+.about-big .story-accent { display:block; margin-top:0; color:var(--red); font-style:normal; }
+.about-quote { margin:28px 0 0; max-width:900px; border-left:2px solid var(--red); padding:2px 0 2px 18px; font-family:var(--serif); font-size:clamp(19px,2.1vw,24px); line-height:1.4; font-weight:700; font-style:italic; letter-spacing:0; }
 .about-text { font-size:17px; max-width:480px; }
 .note { border-left:2px solid var(--red); padding:4px 0 4px 18px; margin-top:28px; color:#666271; font-size:14px; }
 .help-list { border-top:1px solid var(--line); }
@@ -114,6 +114,7 @@ h2 { font-family:"Unbounded",Arial,sans-serif; font-weight:500; font-size:clamp(
 .pillar:nth-child(3) { background:#F5E7EA; }
 .pillar-icon { width:58px; height:58px; border-radius:50%; display:grid; place-items:center; flex:0 0 58px; margin:0; }
 .pillar-icon svg { width:34px; height:34px; fill:none; stroke:var(--ink); stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; }
+.pillar-icon .movement-icon-art { width:42px; height:42px; object-fit:contain; display:block; }
 .icon-attention { background:#DDE5DE; }
 .icon-movement { background:#D1E3EF; }
 .icon-rhythm { background:#F2BAC9; }
@@ -162,10 +163,10 @@ footer a:hover { color:var(--paper); }
   .help-item { grid-template-columns:36px 1fr 28px; gap:12px; padding:21px 0; }
   .help-detail { grid-column:2 / 4; font-size:15px; }
   .sticker { width:88px; height:88px; font-size:11px; left:4%; bottom:2%; }
-  .about-quote { margin-top:26px; font-size:clamp(21px,6vw,28px); }
+  .about-quote { margin-top:16px; font-size:16px; padding-left:12px; }
   .help-detail { grid-column:2 / 4; font-size:15px; }
   .sticker { width:88px; height:88px; font-size:11px; left:4%; bottom:2%; }
-  .about-quote { margin-top:26px; font-size:clamp(21px,6vw,28px); }
+  .about-quote { margin-top:16px; font-size:16px; padding-left:12px; }
   .stats { grid-template-columns:1fr; gap:10px; }
   .stat { min-height:0; padding:20px 16px; }
   .pillar { gap:14px; align-items:center; }
@@ -229,14 +230,14 @@ footer a:hover { color:var(--paper); }
         <div><h2>Я знаю, каково<br>начинать заново.</h2></div>
       </div>
       <div class="about-grid reveal">
-        <div class="about-big">От перелома бедра с осложнениями<span class="story-accent">к тренировкам без ограничений.</span></div>
+        <div class="about-big">От перелома бедра с осложнениями —<br><span class="story-accent">к тренировкам без ограничений</span></div>
         <div class="about-text">
           <p>Я прошла этот путь и превратила спорт из наказания в привычку.</p>
           <p>У меня большой опыт преподавания. Со мной можно учиться спокойно, без стыда и спешки.</p>
           
         </div>
       </div>
-      <p class="about-quote">Я прошла этот путь и превратила спорт из наказания в привычку.</p>
+      <p class="about-quote">У каждого свой старт. Здесь не нужно соответствовать чужим ожиданиям.</p>
     </section>
 
     <section class="section" id="help">
@@ -277,9 +278,7 @@ footer a:hover { color:var(--paper); }
           <p>Учиться замечать сигналы своего тела.</p></div>
         </article>
         <article class="stat pillar reveal">
-          <div class="pillar-icon icon-movement" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><circle cx="22" cy="12" r="4"/><path d="M22 16v10l-5 7M22 26l8 6 7 0M17 33l-7 4M22 26l-8 7M22 18l7-7 2-6M29 11l5 3"/><path d="M9 39h30M15 37l-3 2M32 32l5 7"/></svg>
-          </div>
+          <div class="pillar-icon icon-movement" aria-hidden="true"><img class="movement-icon-art" src="data:image/png;base64,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" alt=""></div>
           <div class="pillar-copy"><h3>Движение</h3>
           <p>Находить комфортный способ включать движение в повседневную жизнь.</p></div>
         </article>
