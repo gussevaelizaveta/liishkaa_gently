@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F7F7F2">
+<title>Елизавета Гусева — чувствовать своё тело</title>
+<meta name="description" content="Индивидуальное онлайн-сопровождение: гармоничные отношения с телом и движение, которое становится естественной частью жизни.">
+<style>
+:root {
+  --paper: #F7F7F2;
+  --ink: #474350;
+  --bluegray: #8D99AE;
+  --red: #D33E43;
+  --blue: #79A9D1;
+  --pink: #F2BAC9;
+  --line: rgba(71,67,80,.19);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Onest", "Arial", sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Onest", Arial, sans-serif; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+p { text-align: justify; text-justify: inter-word; hyphens: auto; }
+
+body:before {
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:20; opacity:.13;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+}
+a { color: inherit; }
+.wrap { width:min(1120px, calc(100% - 48px)); margin:0 auto; }
+header { display:flex; align-items:center; justify-content:space-between; padding:26px 0; border-bottom:1px solid var(--line); }
+.brand { font-family:"Unbounded",Arial,sans-serif; font-size:13px; letter-spacing:.03em; }
+.top-note { font-size:13px; letter-spacing:.09em; text-transform:uppercase; color:#777482; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:12px;
+  border:1px solid var(--ink); border-radius:999px; padding:14px 22px;
+  text-decoration:none; font-size:14px; font-weight:600; transition:transform .2s, background .2s, color .2s;
+}
+.btn:hover { transform:translateY(-2px); }
+.mobile-telegram { display:none; }
+.btn-dark { background:var(--ink); color:var(--paper); }
+.btn-dark:hover { background:var(--red); border-color:var(--red); }
+.btn-light { background:transparent; }
+.arrow { font-size:18px; line-height:1; }
+.hero { min-height:660px; display:grid; grid-template-columns:1.04fr .96fr; gap:48px; align-items:center; padding:72px 0 84px; position:relative; }
+.eyebrow { display:flex; align-items:center; gap:10px; font-size:12px; text-transform:uppercase; letter-spacing:.12em; margin-bottom:25px; }
+.eyebrow:before { content:""; width:30px; height:1px; background:var(--red); }
+h1,h2,h3,p { margin-top:0; }
+h1 { font-family:"Unbounded",Arial,sans-serif; font-weight:500; font-size:clamp(42px,6.2vw,82px); letter-spacing:-.065em; line-height:1.07; margin-bottom:26px; }
+h1 span { color:var(--red); }
+.hero-copy { max-width:500px; font-size:clamp(17px,2vw,21px); line-height:1.55; margin-bottom:30px; }
+.micro { font-size:14px; color:#777482; margin-top:17px; }
+.portrait-stage { min-height:460px; position:relative; display:grid; place-items:center; }
+.portrait {
+  width:min(100%, 440px); aspect-ratio:1; border-radius:50%; overflow:hidden; position:relative;
+  border:1px solid rgba(71,67,80,.18); z-index:2;
+}
+.portrait img { width:100%; height:100%; object-fit:cover; object-position:53% 42%; display:block; }
+.portrait-detail {
+  position:absolute; z-index:4; width:35%; aspect-ratio:1;
+  right:-1%; bottom:-5%; border-radius:50%; overflow:hidden;
+  border:3px solid var(--paper); background:var(--paper);
+  box-shadow:0 8px 24px rgba(71,67,80,.10);
+}
+.portrait-detail img { width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block; }
+.shape { position:absolute; border-radius:50%; pointer-events:none; }
+.shape-blue { width:120px; height:120px; background:var(--blue); top:8%; left:0; }
+.shape-pink { width:72px; height:72px; background:var(--pink); bottom:8%; right:1%; }
+.shape-red { width:35px; height:35px; background:var(--red); top:18%; right:5%; }
+.orbit { position:absolute; width:110%; height:78%; border:1px solid var(--bluegray); border-radius:50%; transform:rotate(-29deg); opacity:.7; }
+.sticker { position:absolute; z-index:3; bottom:7%; left:0; background:var(--pink); width:108px; height:108px; border-radius:50%; display:grid; place-items:center; text-align:center; font-size:12px; line-height:1.3; transform:rotate(-12deg); }
+.section { padding:80px 0; border-top:1px solid var(--line); position:relative; }
+.section-head { display:grid; grid-template-columns:.6fr 1.4fr; gap:36px; margin-bottom:44px; }
+.kicker { font-size:13px; text-transform:uppercase; letter-spacing:.12em; color:#777482; padding-top:10px; }
+h2 { font-family:"Unbounded",Arial,sans-serif; font-weight:500; font-size:clamp(28px,4vw,49px); letter-spacing:-.05em; line-height:1.18; margin-bottom:18px; }
+.lead { font-size:18px; max-width:630px; }
+.path { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:48px 0 36px; position:relative; }
+.path:before { content:""; position:absolute; left:10px; right:10px; top:15px; border-top:1px dashed var(--bluegray); }
+.step { position:relative; padding-top:40px; font-size:14px; }
+.dot { position:absolute; top:6px; left:0; width:19px; height:19px; background:var(--paper); border:5px solid var(--red); border-radius:50%; z-index:1; }
+.step:nth-child(2) .dot { border-color:var(--blue); }
+.step:nth-child(3) .dot { border-color:var(--pink); }
+.step:nth-child(4) .dot { border-color:var(--bluegray); }
+.step b { display:block; font-size:15px; margin-bottom:6px; font-weight:600; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.about-big { font-family:"Unbounded",Arial,sans-serif; font-size:clamp(23px,3vw,36px); line-height:1.28; letter-spacing:-.04em; }
+.about-text { font-size:17px; max-width:480px; }
+.note { border-left:2px solid var(--red); padding:4px 0 4px 18px; margin-top:28px; color:#666271; font-size:14px; }
+.help-list { border-top:1px solid var(--line); }
+.help-item { display:grid; grid-template-columns:70px 1fr 40px; gap:20px; align-items:center; padding:25px 0; border-bottom:1px solid var(--line); }
+.help-item .num { font-family:"Unbounded",Arial,sans-serif; font-size:13px; color:var(--red); }
+.help-item h3 { font-size:clamp(17px,2.2vw,23px); font-weight:500; margin:0; }
+.help-item svg { width:25px; height:25px; stroke:var(--ink); fill:none; stroke-width:1.4; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.stat { padding:26px 22px; border-radius:4px; min-height:172px; }
+.pillar { display:flex; align-items:center; gap:20px; }
+.pillar:nth-child(1) { background:#EEF0EA; }
+.pillar:nth-child(2) { background:#E8EFF3; }
+.pillar:nth-child(3) { background:#F5E7EA; }
+.pillar-icon { width:58px; height:58px; border-radius:50%; display:grid; place-items:center; flex:0 0 58px; margin:0; }
+.pillar-icon svg { width:34px; height:34px; fill:none; stroke:var(--ink); stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; }
+.icon-attention { background:#DDE5DE; }
+.icon-movement { background:#D1E3EF; }
+.icon-rhythm { background:#F2BAC9; }
+.pillar-copy { min-width:0; }
+.pillar h3 { font-family:"Unbounded",Arial,sans-serif; font-size:clamp(17px,1.8vw,21px); font-weight:500; letter-spacing:-.04em; margin-bottom:8px; }
+.pillar p { margin:0; font-size:14px; max-width:230px; }
+.contact { background:var(--ink); color:var(--paper); padding:65px 0 34px; margin-top:0; }
+.contact .kicker { color:#C4C0CE; }
+.contact h2 { max-width:650px; }
+.contact-inner { display:flex; justify-content:space-between; align-items:end; gap:35px; }
+.contact-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.contact .btn { border-color:var(--paper); }
+.contact .btn-dark { background:var(--paper); color:var(--ink); }
+.contact .btn-dark:hover { background:var(--pink); border-color:var(--pink); }
+.contact .btn-light { color:var(--paper); }
+.contact .btn-light:hover { background:rgba(255,255,255,.1); }
+.contact-blob { width:130px; height:130px; border-radius:50%; background:var(--red); flex:none; position:relative; margin:0 4% 12px 0; }
+.contact-blob:after { content:""; position:absolute; width:48px; height:48px; border:1px solid var(--paper); border-radius:50%; left:40px; top:40px; }
+footer { display:flex; justify-content:space-between; gap:16px; padding-top:50px; color:#C4C0CE; font-size:12px; }
+footer a { text-decoration:none; }
+footer a:hover { color:var(--paper); }
+.reveal { opacity:1; transform:none; }
+.js-motion .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+.js-motion .reveal.visible { opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion: reduce) { *,*:before,*:after { scroll-behavior:auto!important; transition:none!important; animation:none!important; } .js-motion .reveal { opacity:1; transform:none; } }
+@media (max-width:760px) {
+  body { padding-bottom:76px; }
+  .mobile-telegram { display:flex; position:fixed; z-index:30; left:18px; right:18px; bottom:14px; box-shadow:0 6px 24px rgba(71,67,80,.18); }
+
+  .wrap { width:calc(100% - 36px); }
+  header { padding:20px 0; }
+  .top-note { max-width:120px; text-align:right; line-height:1.4; }
+  .hero { grid-template-columns:1fr; gap:20px; padding:55px 0 65px; min-height:auto; }
+  h1 { font-size:clamp(43px,13vw,68px); }
+  .portrait-stage { min-height:330px; grid-row:1; }
+  .portrait { width:min(78vw,340px); }
+  .portrait-detail { width:32%; right:3%; bottom:-4%; border-width:2px; }
+  .shape-blue { width:82px; height:82px; left:4%; }
+  .shape-pink { width:54px; height:54px; right:3%; }
+  .shape-red { width:25px; height:25px; }
+  .sticker { width:82px; height:82px; font-size:10px; left:4%; bottom:2%; }
+  .section { padding:58px 0; }
+  .section-head { grid-template-columns:1fr; gap:12px; margin-bottom:30px; }
+  .path { grid-template-columns:1fr 1fr; row-gap:25px; margin-top:34px; }
+  .path:before { display:none; }
+  .step { padding-top:33px; }
+  .about-grid { grid-template-columns:1fr; gap:20px; }
+  .help-item { grid-template-columns:36px 1fr 28px; gap:12px; padding:21px 0; }
+  .stats { grid-template-columns:1fr; gap:10px; }
+  .stat { min-height:0; padding:20px 16px; }
+  .pillar { gap:14px; align-items:center; }
+  .pillar-icon { width:48px; height:48px; flex-basis:48px; }
+  .pillar-icon svg { width:29px; height:29px; }
+  .pillar h3 { font-size:17px; margin-bottom:6px; }
+  .pillar p { font-size:14px; }
+  .contact { padding-top:55px; }
+  .contact-inner { align-items:start; }
+  .contact-blob { width:72px; height:72px; margin:0; }
+  .contact-blob:after { width:28px; height:28px; left:21px; top:21px; }
+  footer { padding-top:38px; flex-direction:column; }
+}
+@media (max-width:390px) { .wrap { width:calc(100% - 28px); } .contact-blob { display:none; } .btn { padding:13px 17px; } }
+</style>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Елизавета Гусева — чувствовать своё тело">
+<meta property="og:description" content="Индивидуальное онлайн-сопровождение: гармоничные отношения с телом и движение, которое становится естественной частью жизни.">
+<meta property="og:url" content="https://gussevaelizaveta.github.io/liishkaa_gently/">
+<meta property="og:image" content="https://gussevaelizaveta.github.io/liishkaa_gently/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">ЕЛИЗАВЕТА / ДВИЖЕНИЕ К СЕБЕ</div>
+    <div class="top-note">Тело · движение · опора</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Индивидуальное онлайн-сопровождение</div>
+        <h1>Чувствовать <span>своё тело</span></h1>
+        <p class="hero-copy">Учимся понимать своё тело, замечать его возможности и находить движение, которое приносит удовольствие.</p>
+        <a class="btn btn-dark" href="https://t.me/wyzrouixs" target="_blank" rel="noopener noreferrer">Обсудить сопровождение <span class="arrow">↗</span></a>
+        <p class="micro">Для тех, кто только начинает знакомство со своим телом.</p>
+      </div>
+      <div class="portrait-stage reveal" aria-label="Фотография Елизаветы">
+        <div class="orbit"></div><div class="shape shape-blue"></div><div class="shape shape-pink"></div><div class="shape shape-red"></div>
+        <div class="portrait"><img src="images/portrait.webp" alt="Елизавета в светлом пальто на фоне городской архитектуры"></div>
+        <div class="portrait-detail" aria-label="Елизавета на тренировке">
+          <img src="images/training.webp" alt="Елизавета тренируется в зале">
+        </div>
+        <div class="sticker">Бережно<br>к себе<br>и своему телу</div>
+      </div>
+    </section>
+
+    <section class="section" id="format">
+      <div class="section-head reveal">
+        <div class="kicker">01 / Формат работы</div>
+        <div>
+          <h2>Начать можно<br>с любой точки.</h2>
+          <p class="lead">Индивидуальное сопровождение онлайн. Вместе найдём подходящий вам способ двигаться.</p>
+        </div>
+      </div>
+      <div class="path reveal">
+        <div class="step"><span class="dot"></span><b>Знакомство</b>Обсудим ваш опыт, цели и самочувствие.</div>
+        <div class="step"><span class="dot"></span><b>Ориентиры</b>Определим, что важно именно вам.</div>
+        <div class="step"><span class="dot"></span><b>Практика</b>Подберём посильное движение и нагрузку.</div>
+        <div class="step"><span class="dot"></span><b>Свой ритм</b>Будем замечать изменения и адаптироваться.</div>
+      </div>
+      <a class="btn btn-light reveal" href="https://www.instagram.com/liishkaa" target="_blank" rel="noopener noreferrer">Канал и заметки <span class="arrow">↗</span></a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <div class="kicker">02 / Обо мне</div>
+        <div><h2>Я знаю, каково<br>начинать заново.</h2></div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-big">От перелома бедра с осложнениями — к тренировкам без ограничений.</div>
+        <div class="about-text">
+          <p>Я прошла этот путь и превратила спорт из наказания в привычку.</p>
+          <p>У меня большой опыт преподавания. Со мной можно учиться спокойно, без стыда и спешки.</p>
+          <div class="note">У каждого свой старт. Здесь не нужно соответствовать чужим ожиданиям.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="help">
+      <div class="section-head reveal">
+        <div class="kicker">03 / Чем помогу</div>
+        <div><h2>Больше контакта.<br>Меньше давления.</h2></div>
+      </div>
+      <div class="help-list">
+        <div class="help-item reveal"><span class="num">01</span><h3>Познакомиться с телом и его сигналами</h3><svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></svg></div>
+        <div class="help-item reveal"><span class="num">02</span><h3>Найти комфортный способ двигаться</h3><svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></svg></div>
+        <div class="help-item reveal"><span class="num">03</span><h3>Сделать движение устойчивой привычкой</h3><svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </section>
+
+    <section class="section" id="numbers">
+      <div class="section-head reveal">
+        <div class="kicker">04 / Мой путь</div>
+        <div><h2>Опыт, который<br>остаётся с вами.</h2><p class="lead">Внимание к ощущениям, постепенный прогресс и устойчивые привычки.</p></div>
+      </div>
+      <div class="stats pillars">
+        <article class="stat pillar reveal">
+          <div class="pillar-icon icon-attention" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M5 24s7-12 19-12 19 12 19 12-7 12-19 12S5 24 5 24Z"/><circle cx="24" cy="24" r="6"/><path d="M24 4v3M24 41v3M4 24h3M41 24h3"/></svg>
+          </div>
+          <div class="pillar-copy"><h3>Внимание</h3>
+          <p>Учиться замечать сигналы своего тела.</p></div>
+        </article>
+        <article class="stat pillar reveal">
+          <div class="pillar-icon icon-movement" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 31c5-10 10-15 16-15 5 0 8 4 8 9s-4 9-9 9H8"/><path d="m27 9 6 7 7-6"/><circle cx="14" cy="13" r="4"/></svg>
+          </div>
+          <div class="pillar-copy"><h3>Движение</h3>
+          <p>Находить комфортный способ быть активной.</p></div>
+        </article>
+        <article class="stat pillar reveal">
+          <div class="pillar-icon icon-rhythm" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 13v12l8 5"/><path d="M8 8l5 2M40 8l-5 2"/></svg>
+          </div>
+          <div class="pillar-copy"><h3>Регулярность</h3>
+          <p>Выстраивать привычку без давления на себя.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<section class="contact" id="contacts">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div>
+        <div class="kicker">05 / Контакты</div>
+        <h2>Давайте начнём<br>с разговора.</h2>
+        <p class="lead">Напишите мне, и обсудим, с чего комфортно начать.</p>
+        <div class="contact-actions">
+          <a class="btn btn-dark" href="https://t.me/wyzrouixs" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">↗</span></a>
+          <a class="btn btn-light" href="mailto:gusseva.elizaveta@gmail.com">Написать на почту <span class="arrow">↗</span></a>
+          <a class="btn btn-light" href="https://www.instagram.com/liishkaa" target="_blank" rel="noopener noreferrer">Instagram <span class="arrow">↗</span></a>
+        </div>
+      </div>
+      <div class="contact-blob" aria-hidden="true"></div>
+    </div>
+    <footer><span>Елизавета Гусева · индивидуальное онлайн-сопровождение</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Наверх ↑</a></footer>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+  document.documentElement.classList.add('js-motion');
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.reveal').forEach((el) => {
+      gsap.fromTo(el, { autoAlpha: 0, y: 24 }, {
+        autoAlpha: 1, y: 0, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+      });
+    });
+    gsap.utils.toArray('.shape, .orbit, .sticker, .contact-blob').forEach((el, i) => {
+      gsap.fromTo(el, { y: 8, rotate: -3 }, {
+        y: -8, rotate: 3, duration: 3.2 + (i % 3) * 0.5,
+        ease: 'sine.inOut', yoyo: true, repeat: -1
+      });
+    });
+
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  }
+})();
+</script>
+<a class="btn btn-dark mobile-telegram" href="https://t.me/wyzrouixs" target="_blank" rel="noopener noreferrer" aria-label="Написать Елизавете в Telegram" style="display:none;">Написать в Telegram <span class="arrow">↗</span></a>
+<style>@media (max-width:760px) { .mobile-telegram { display:flex !important; } }</style>
+</body>
+</html>
